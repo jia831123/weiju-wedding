@@ -3,11 +3,14 @@ const Context = () => {
   return (
     <>
       <div>
-        <div className='text-xl text-center font-bold'>WEDDING INVITATION</div>
-        <div>
-          <Image src="/src/assets/people.png" />
+        <div className="text-xl text-center font-black mt-10 mb-5">
+          <div>WEDDING </div>
+          <div>INVITATION</div>
         </div>
-        <div className='text-center font-bold'>
+        <div className='flex justify-center'>
+          <Image className="h-[400px]" src="/src/assets/people.png" />
+        </div>
+        <div className="text-center font-bold">
           <div>2023.12.10</div>
           <div>晚宴 18:00 準時入席</div>
           <div>晶華酒店</div>
