@@ -1,22 +1,27 @@
-import { Div, Button, Modal, Icon, Text } from 'atomize'
+import { Modal, Icon } from 'atomize'
+import { useEffect, useState } from 'react'
 const ForUModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+  const [name, setName] = useState('好朋友')
+  const [text, settext] = useState('邀請你能前來')
+  useEffect(() => {
+    const queryParameters = new URLSearchParams(window.location.search)
+    const id = queryParameters.get('id')
+    if (id && window.data) {
+      const datas = window.data.find((each) => each.includes(id)) as any
+      if (datas) {
+        setName(datas[1])
+        settext(datas[2])
+      }
+    }
+  }, [window.location.search, window.data])
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} align="start" rounded="md">
       <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="16px" onClick={onClose} cursor="pointer" />
-      <Div d="flex" m={{ b: '4rem' }}>
-        <Icon name="AlertSolid" color="warning700" m={{ t: '0.35rem', r: '0.5rem' }} />
-        <Text p={{ l: '0.5rem', t: '0.25rem' }} textSize="subheader">
-          Do you really want to submit the request.
-        </Text>
-      </Div>
-      <Div d="flex" justify="flex-end">
-        <Button onClick={onClose} bg="gray200" textColor="medium" m={{ r: '1rem' }}>
-          Cancel
-        </Button>
-        <Button onClick={onClose} bg="info700">
-          Yes, Submit
-        </Button>
-      </Div>
+      <div className="min-h-[300px]">
+        <h1 className="text-[#AC8A5F] text-xl">Dear {name}</h1>
+        <p className="text-[#AC8A5F] text-sm mt-3">{text}</p>
+      </div>
     </Modal>
   )
 }
