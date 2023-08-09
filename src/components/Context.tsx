@@ -1,5 +1,5 @@
-import { Image } from 'atomize'
 const Context = () => {
+
   return (
     <>
       <div>
@@ -8,7 +8,7 @@ const Context = () => {
           <div>INVITATION</div>
         </div>
         <div className='flex justify-center'>
-          <Image className="h-[400px]" src="/src/assets/people.png" />
+          <img className="h-[400px]" src="/src/assets/people.png" />
         </div>
         <div className="text-center font-bold">
           <div>2023.12.10</div>

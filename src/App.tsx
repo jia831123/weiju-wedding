@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { Div } from 'atomize'
 import './App.css'
 import Footer from './components/Footer'
 import Context from './components/Context'
