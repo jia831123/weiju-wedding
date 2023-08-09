@@ -14,6 +14,13 @@ const Footer = () => {
   return (
     <>
       <div className="flex static h-[200px] mt-10">
+        <div
+          className="absolute rounded-[50%] w-[1000px] h-[900px] top-[90%] left-[50%]  bg-red-400 z-0"
+          style={{
+            transform: 'translate(-50%, -50%)',
+          }}
+        ></div>
+
         <div className="absolute left-0 bottom-0">
           <Image src="/src/assets/left.png" />
         </div>

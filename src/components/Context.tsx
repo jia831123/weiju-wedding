@@ -1,13 +1,12 @@
 const Context = () => {
-
   return (
     <>
-      <div>
+      <div className="z-10">
         <div className="text-xl text-center font-black mt-10 mb-5">
           <div>WEDDING </div>
           <div>INVITATION</div>
         </div>
-        <div className='flex justify-center'>
+        <div className="flex justify-center">
           <img className="h-[400px]" src="/src/assets/people.png" />
         </div>
         <div className="text-center font-bold">
