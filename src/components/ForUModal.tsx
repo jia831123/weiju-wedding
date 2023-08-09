@@ -2,15 +2,15 @@ import { Modal, Icon } from 'atomize'
 import { useEffect, useState } from 'react'
 const ForUModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   const [name, setName] = useState('好朋友')
-  const [text, settext] = useState('邀請你能前來')
+  const [text, setText] = useState('邀請你能前來')
   useEffect(() => {
     const queryParameters = new URLSearchParams(window.location.search)
     const id = queryParameters.get('id')
     if (id && window.data) {
-      const datas = window.data.find((each) => each.includes(id)) as any
-      if (datas) {
-        setName(datas[1])
-        settext(datas[2])
+      const data = window.data.find((each) => each.includes(id))
+      if (data) {
+        setName(data[1])
+        setText(data[2])
       }
     }
   }, [window.location.search, window.data])

@@ -3,18 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="/src/assets/awesomefont/all.css"
-      type="text/css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/src/assets/awesomefont/all.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap" rel="stylesheet" />
     <title>Vite + React + TS</title>
   </head>
   <body>
@@ -26,9 +19,7 @@
         gapi.client
           .init({
             apiKey: 'AIzaSyA8t-hUZ5R1OHDbUoVpt55lxWq9uh1Yq9Q',
-            discoveryDocs: [
-              'https://sheets.googleapis.com/$discovery/rest?version=v4',
-            ],
+            discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
           })
           .then(function () {
             // API 初始化成功后进行数据读取
@@ -57,10 +48,8 @@
               window.data = values
             },
             function (response) {
-              console.error(
-                'Error fetching data: ' + response.result.error.message
-              )
-            }
+              console.error('Error fetching data: ' + response.result.error.message)
+            },
           )
       }
     </script>
