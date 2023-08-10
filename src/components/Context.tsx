@@ -7,7 +7,7 @@ const Context = () => {
           <div>INVITATION</div>
         </div>
         <div className="flex justify-center">
-          <img className="h-[400px]" src="/src/assets/people.png" />
+          <img className="h-[400px]" src="/people.png" />
         </div>
         <div className="text-center font-bold text-white">
           <div>2023.12.10</div>
