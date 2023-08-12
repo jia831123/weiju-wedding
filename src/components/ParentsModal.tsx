@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChampagneGlasses } from '@fortawesome/free-solid-svg-icons'
 const ParentsModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose} align="start" rounded="md">
+    <Modal isOpen={isOpen} onClose={onClose} align="center" rounded="md">
       <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="20px" onClick={onClose} cursor="pointer" />
       <div className="flex flex-col gap-3">
         <div>
@@ -38,7 +38,7 @@ const ParentsModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
         </div>
 
         <div className="flex justify-center">
-          <Button onClick={onClose} bg="info700">
+          <Button onClick={onClose} bg="brand600">
             知道了
           </Button>
         </div>

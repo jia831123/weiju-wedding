@@ -1,7 +1,7 @@
 import { Div, Button, Modal, Icon, Text } from 'atomize'
 const PhotosModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose} align="start" rounded="md">
+    <Modal isOpen={isOpen} onClose={onClose} align="center" rounded="md">
       <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="16px" onClick={onClose} cursor="pointer" />
       <Div d="flex" m={{ b: '4rem' }}>
         <Icon name="AlertSolid" color="warning700" m={{ t: '0.35rem', r: '0.5rem' }} />

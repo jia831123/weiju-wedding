@@ -2,7 +2,7 @@ import { Button, Modal, Icon } from 'atomize'
 const MapModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} align="start" rounded="md">
-      <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="16px" onClick={onClose} cursor="pointer" />
+      <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="30px" onClick={onClose} cursor="pointer" />
       <div className="text-[#AC8A5F] flex-col gap-3">
         <h1>交通資訊</h1>
         <div className="flex gap-3">
@@ -41,8 +41,8 @@ const MapModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
             <div>飯店備有代客停車服務，同時於飯店地下4、5樓為貴賓專用停車場，方便來賓們使用。</div>
           </div>
         </div>
-        <div className="flex justify-center">
-          <Button onClick={onClose} bg="info700">
+        <div className="flex justify-center mt-3">
+          <Button onClick={onClose} bg="brand600">
             知道了
           </Button>
         </div>
