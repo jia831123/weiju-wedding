@@ -9,6 +9,9 @@ const Context = () => {
         <div className="flex justify-center">
           <img className="h-[400px]" src="/people.png" />
         </div>
+        <div className="font-pinyon my-3 text-xl">
+          <div className="text-center text-white">Tingfeng & Weiyu</div>
+        </div>
         <div className="text-center font-bold text-white">
           <div>2023.12.10</div>
           <div>晚宴 18:00 準時入席</div>

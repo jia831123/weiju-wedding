@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       notoSans: ['ui-serif', 'Georgia'],
+      pinyon: ['Pinyon Script'],
     },
   },
   plugins: [],

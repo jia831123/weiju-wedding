@@ -5,8 +5,10 @@ const MapModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
       <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="30px" onClick={onClose} cursor="pointer" />
       <div className="text-[#AC8A5F] flex-col gap-3">
         <h1>交通資訊</h1>
-        <div className="flex gap-3">
-          <div>logo</div>
+        <div className="flex gap-3 mt-3">
+          <div className="flex align-center">
+            <img className="object-contain" width={`250px`} src={`/regent_Taipei_logo.png`}></img>
+          </div>
           <div>晶華酒店 晶華會Regent Taipei Noble House 1F 台北市中山區中山北路二段 39 巷 3 號 (02) 2523-8000</div>
         </div>
         <div>
