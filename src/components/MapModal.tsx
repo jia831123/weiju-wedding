@@ -1,4 +1,4 @@
-import { Button, Modal, Icon } from 'atomize'
+import { Button, Modal, Icon, Anchor } from 'atomize'
 const MapModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} align="start" rounded="md">
@@ -16,6 +16,30 @@ const MapModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
             height="350"
             loading="lazy"
           ></iframe>
+          <div className="my-3 flex justify-center">
+            <Anchor
+              href="https://www.google.com/maps/dir//%E5%8F%B0%E5%8C%97%E6%99%B6%E8%8F%AF%E9%85%92%E5%BA%97+104%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E4%B8%AD%E5%B1%B1%E5%8C%97%E8%B7%AF%E4%BA%8C%E6%AE%B539%E5%B7%B73%E8%99%9F/@25.0541906,121.4417858,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3442a968f68729e7:0x6e3f6d2374968eaa!2m2!1d121.5241873!2d25.0542133?entry=ttu"
+              target="_blank"
+            >
+              <Button
+                h="2rem"
+                p={{ x: '0.75rem' }}
+                textSize="caption"
+                textColor="gray100"
+                hoverTextColor="info900"
+                bg="black"
+                rounded="circle"
+                hoverBg="info200"
+                border="1px solid"
+                borderColor="info700"
+                hoverBorderColor="info900"
+                m={{ r: '0.5rem' }}
+              >
+                <img height={`15`} width={`15`} src="/maps15_bnuw3a_32dp.ico"></img>
+                地圖導航
+              </Button>
+            </Anchor>
+          </div>
         </div>
         <div className="flex flex-col gap-3">
           <div>
@@ -41,7 +65,7 @@ const MapModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
             <div>飯店備有代客停車服務，同時於飯店地下4、5樓為貴賓專用停車場，方便來賓們使用。</div>
           </div>
         </div>
-        <div className="flex justify-center mt-3">
+        <div className="flex justify-center my-6">
           <Button onClick={onClose} bg="brand600">
             知道了
           </Button>
