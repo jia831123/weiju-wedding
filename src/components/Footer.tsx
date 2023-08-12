@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage, faMapLocation, faChampagneGlasses, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { Image } from 'atomize'
 import { useState } from 'react'
 import MapModal from './MapModal'
 import ForUModal from './ForUModal'
