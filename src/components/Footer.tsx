@@ -13,13 +13,14 @@ const Footer = () => {
   const [isShowPhotos, setShowPhotos] = useState(false)
   return (
     <>
-      <div className="flex static h-[200px] mt-10 ">
-        <div className="absolute left-0 bottom-0">
+      <div className="flex static h-[200px] mt-10">
+        {/* <div className="absolute left-0 bottom-0">
           <Image src="/left.png" />
         </div>
         <div className="absolute left-0 bottom-0">
           <Image src="/right.png" />
-        </div>
+        </div> */}
+
         <div className="h-full w-full text-xl z-10 text-white">
           <div className="grid gap-2 mx-10 grid-cols-4 text-center ">
             <div className="cursor-pointer" onClick={() => setShowPhotos(true)}>
