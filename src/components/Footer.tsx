@@ -1,15 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage, faMapLocation, faChampagneGlasses, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MapModal from './MapModal'
 import ForUModal from './ForUModal'
 import ParentsModal from './ParentsModal'
 import PhotosModal from './PhotosModal'
+import useGoogleApi from '../hooks/useGoogleAPI'
 const Footer = () => {
   const [isShowMap, setShowMap] = useState(false)
   const [isShowForU, setShowForU] = useState(false)
+  const [forUData, setForUData] = useState({ name: '親愛的朋友', text: '我們誠摯的歡迎您' })
   const [isShowParents, setShowParents] = useState(false)
   const [isShowPhotos, setShowPhotos] = useState(false)
+  const { getDataById } = useGoogleApi()
+  useEffect(() => {
+    const queryParameters = new URLSearchParams(window.location.search)
+    const id = queryParameters.get('id')
+    debugger
+    if (!id) return
+    getDataById(id).then((res) => {
+      if (res) setForUData(res)
+    })
+  }, [])
   return (
     <>
       <div className="flex static h-[200px] mt-10">
@@ -41,7 +53,7 @@ const Footer = () => {
           </div>
         </div>
         <MapModal isOpen={isShowMap} onClose={() => setShowMap(false)} />
-        <ForUModal isOpen={isShowForU} onClose={() => setShowForU(false)} />
+        <ForUModal isOpen={isShowForU} onClose={() => setShowForU(false)} data={forUData} />
         <ParentsModal isOpen={isShowParents} onClose={() => setShowParents(false)} />
         <PhotosModal isOpen={isShowPhotos} onClose={() => setShowPhotos(false)} />
       </div>

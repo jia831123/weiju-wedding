@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <div className="overflow-scroll h-full">
-        <div className="min-h-[800px]w-full flex flex-col bg-[#d97760] justify-between overflow-auto bg-no-repeat bg-cover bg-[url('/iphon14forjia.png')]">
+        <div className="min-h-[800px]w-full flex flex-col bg-[#d97760] justify-between overflow-auto bg-center bg-no-repeat bg-cover bg-[url('/iphon14forjia.png')] xl:bg-[url('/macforjia.png')]">
           <Context />
           <Footer />
         </div>

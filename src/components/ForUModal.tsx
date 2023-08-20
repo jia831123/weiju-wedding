@@ -1,26 +1,34 @@
 import { Modal, Icon } from 'atomize'
-import { useEffect, useState } from 'react'
-const ForUModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-  const [name, setName] = useState('好朋友')
-  const [text, setText] = useState('邀請你能前來')
-  useEffect(() => {
-    const queryParameters = new URLSearchParams(window.location.search)
-    const id = queryParameters.get('id')
-    if (id && window.data) {
-      const data = window.data.find((each) => each.includes(id))
-      if (data) {
-        setName(data[1])
-        setText(data[2])
-      }
-    }
-  }, [window.location.search, window.data])
+const ForUModal = ({
+  isOpen,
+  onClose,
+  data,
+}: {
+  isOpen: boolean
+  onClose: () => void
+  data: {
+    name: string
+    text: string
+  }
+}) => {
+  // useEffect(() => {
+  //   const queryParameters = new URLSearchParams(window.location.search)
+  //   const id = queryParameters.get('id')
+  //   if (id && window.data) {
+  //     const data = window.data.find((each) => each.includes(id))
+  //     if (data) {
+  //       setName(data[1])
+  //       setText(data[2])
+  //     }
+  //   }
+  // }, [window.location.search, window.data])
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} align="center" rounded="md">
       <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="30px" onClick={onClose} cursor="pointer" />
       <div className="min-h-[300px]">
-        <h1 className="text-[#AC8A5F] text-xl">Dear {name}</h1>
-        <p className="text-[#AC8A5F] text-sm mt-3">{text}</p>
+        <h1 className="text-[#AC8A5F] text-xl">Dear {data.name}</h1>
+        <p className="text-[#AC8A5F] text-sm mt-3">{data.text}</p>
       </div>
     </Modal>
   )
