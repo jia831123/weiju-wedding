@@ -10,6 +10,12 @@ declare global {
   interface Window {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     data: string[][]
+    gapi: {
+      load: (type: 'client', callback: () => void) => void
+      client: {
+        init: (payload: { apiKey: string; discoveryDocs: string[] }) => Promise<unknown>
+      }
+    }
   }
 }
 // 1. Create a client engine instance

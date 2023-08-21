@@ -12,15 +12,16 @@ const Footer = () => {
   const [forUData, setForUData] = useState({ name: '親愛的朋友', text: '我們誠摯的歡迎您' })
   const [isShowParents, setShowParents] = useState(false)
   const [isShowPhotos, setShowPhotos] = useState(false)
-  const { getDataById } = useGoogleApi()
+  const { getDataById, init } = useGoogleApi()
   useEffect(() => {
     const queryParameters = new URLSearchParams(window.location.search)
     const id = queryParameters.get('id')
-    debugger
     if (!id) return
-    getDataById(id).then((res) => {
-      if (res) setForUData(res)
-    })
+    init().then(() =>
+      getDataById(id).then((res) => {
+        if (res) setForUData(res)
+      }),
+    )
   }, [])
   return (
     <>

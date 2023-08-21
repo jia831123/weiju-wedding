@@ -2,7 +2,25 @@ import { useState } from 'react'
 
 export const useGoogleApi = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [gapi] = useState(window['gapi' as any] ? window['gapi' as any] : [])
+  const [gapi] = useState(window['gapi'])
+  const init = () =>
+    new Promise((res, rej) => {
+      try {
+        gapi.load('client', function () {
+          gapi.client
+            .init({
+              apiKey: 'AIzaSyA8t-hUZ5R1OHDbUoVpt55lxWq9uh1Yq9Q',
+              discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+            })
+            .then((r) => {
+              res(r)
+            })
+        })
+      } catch (err) {
+        rej(err)
+      }
+    })
+
   const getDataFromGoogleSheets = async (): Promise<[string, string, string, string][]> => {
     if (!gapi) {
       console.warn(`gapi not found`)
@@ -43,6 +61,6 @@ export const useGoogleApi = () => {
     }
     return undefined
   }
-  return { gapi, getDataById, getDataFromGoogleSheets }
+  return { gapi, getDataById, getDataFromGoogleSheets, init }
 }
 export default useGoogleApi

@@ -17,44 +17,5 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script src="https://apis.google.com/js/api.js"></script>
-    <script>
-      gapi.load('client', function () {
-        gapi.client
-          .init({
-            apiKey: 'AIzaSyA8t-hUZ5R1OHDbUoVpt55lxWq9uh1Yq9Q',
-            discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-          })
-          .then(function () {
-            // API 初始化成功后进行数据读取
-            getDataFromGoogleSheets()
-          })
-      })
-      // 获取 Google Sheets 中的数据
-      function getDataFromGoogleSheets() {
-        gapi.client.sheets.spreadsheets.values
-          .get({
-            spreadsheetId: '1a6ew3ROASG42a74gPIvPTOFpCTz_hae-_ZiPV5ZL4TA',
-            range: 'one', // 范围可以是特定的工作表和单元格范围
-          })
-          .then(
-            function (response) {
-              var values = response.result.values
-              if (values.length > 0) {
-                // 处理获取到的数据
-                for (var i = 0; i < values.length; i++) {
-                  var row = values[i]
-                  // 在这里根据您的需求处理每一行数据
-                }
-              } else {
-                console.log('No data found.')
-              }
-              window.data = values
-            },
-            function (response) {
-              console.error('Error fetching data: ' + response.result.error.message)
-            },
-          )
-      }
-    </script>
   </body>
 </html>
