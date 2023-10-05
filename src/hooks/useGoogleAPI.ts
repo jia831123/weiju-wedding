@@ -24,6 +24,7 @@ export const useGoogleApi = () => {
   const getDataFromGoogleSheets = async (): Promise<[string, string, string, string][]> => {
     if (!gapi) {
       console.warn(`gapi not found`)
+      console.log('test')
       return []
     }
     try {
