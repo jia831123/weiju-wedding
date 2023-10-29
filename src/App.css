@@ -4,7 +4,9 @@
   margin:0px;
   background-color: rgb(229, 96, 96);
 }
-
+.scroll-container {
+  overscroll-behavior: none;
+}
 .logo { 
   height: 6em;
   padding: 1.5em;

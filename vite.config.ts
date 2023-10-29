@@ -14,4 +14,14 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    cors: true,
+    host: true,
+    open: true,
+    watch: {
+      usePolling: true,
+    },
+    port: 8890,
+    hmr: true,
+  },
 })

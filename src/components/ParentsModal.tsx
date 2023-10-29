@@ -36,12 +36,6 @@ const ParentsModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
           </div>
           <div className="mt-3 text-[#AC8A5F] text-center">誠摯邀請您參加我們的結婚囍宴！</div>
         </div>
-
-        <div className="flex justify-center">
-          <Button onClick={onClose} bg="brand600">
-            知道了
-          </Button>
-        </div>
       </div>
     </Modal>
   )

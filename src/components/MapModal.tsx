@@ -67,11 +67,6 @@ const MapModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
             <div>飯店備有代客停車服務，同時於飯店地下4、5樓為貴賓專用停車場，方便來賓們使用。</div>
           </div>
         </div>
-        <div className="flex justify-center my-6">
-          <Button onClick={onClose} bg="brand600">
-            知道了
-          </Button>
-        </div>
       </div>
     </Modal>
   )
