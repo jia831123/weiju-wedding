@@ -1,4 +1,4 @@
-import { Button, Modal, Icon } from 'atomize'
+import { Modal, Icon } from 'atomize'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChampagneGlasses } from '@fortawesome/free-solid-svg-icons'
 const ParentsModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
