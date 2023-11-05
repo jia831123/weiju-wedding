@@ -1,4 +1,4 @@
-import { Div, Button, Modal, Icon, Text } from 'atomize'
+import { Div, Modal, Icon, Text } from 'atomize'
 import ImageViewer from 'react-simple-image-viewer'
 import { useState, useCallback } from 'react'
 const PhotosModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
@@ -76,14 +76,6 @@ const PhotosModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
             onClose={closeImageViewer}
           />
         )}
-      </div>
-      <div className="flex mt-2">
-        <Button onClick={onClose} bg="gray200" textColor="medium" m={{ r: '1rem' }}>
-          Cancel
-        </Button>
-        <Button onClick={onClose} bg="info700">
-          Yes, Submit
-        </Button>
       </div>
     </Modal>
   )
