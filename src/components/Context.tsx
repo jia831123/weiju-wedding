@@ -31,8 +31,8 @@ const Context = () => {
           <Footer />
         </div>
         <div className="hidden md:block ">
-          <div className="flex justify-center h-full items-center">
-            <img className="h-[400px]" src="/people.png" />
+          <div className="flex justify-center h-full item-center">
+            <img className="h-[600px]" src="/people.png" />
           </div>
         </div>
       </div>

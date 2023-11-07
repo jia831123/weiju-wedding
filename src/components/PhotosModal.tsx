@@ -4,7 +4,7 @@ import { useState, useCallback } from 'react'
 const PhotosModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   const images = new Array(56)
     .fill(true)
-    .map((e, i) => `https://jiahao1123.s3.ap-northeast-2.amazonaws.com/weiju/${i + 1}.jpg`)
+    .map((_, i) => `https://jiahao1123.s3.ap-northeast-2.amazonaws.com/weiju/${i + 1}.jpg`)
   const [currentImage, setCurrentImage] = useState(0)
   const [isViewerOpen, setIsViewerOpen] = useState(false)
   const openImageViewer = useCallback((index: number) => {
