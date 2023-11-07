@@ -12,7 +12,7 @@ const Context = () => {
             </div>
             <div className=" block md:hidden">
               <div className="flex justify-center">
-                <img className="h-[400px]" src="/people.png" />
+                <img className="h-[250px]" src="/people.png" />
               </div>
             </div>
             <div className="font-pinyon my-3 text-xl">
