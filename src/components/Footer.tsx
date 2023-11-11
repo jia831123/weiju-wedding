@@ -25,7 +25,7 @@ const Footer = () => {
   }, [])
   return (
     <>
-      <div className="flex static h-[200px] mt-10">
+      <div className="flex relative   ">
         {/* <div className="absolute left-0 bottom-0">
           <Image src="/left.png" />
         </div>
@@ -53,6 +53,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         <MapModal isOpen={isShowMap} onClose={() => setShowMap(false)} />
         <ForUModal isOpen={isShowForU} onClose={() => setShowForU(false)} data={forUData} />
         <ParentsModal isOpen={isShowParents} onClose={() => setShowParents(false)} />
