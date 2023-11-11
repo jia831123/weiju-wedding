@@ -4,7 +4,7 @@ const Context = () => {
   return (
     <>
       <div className="z-10 grid grid-cols-1 md:grid-cols-2 h-full">
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between ">
           <div>
             <div className="text-xl text-center font-black mt-10 mb-5 text-white tracking-[5px]">
               <div>WEDDING </div>
