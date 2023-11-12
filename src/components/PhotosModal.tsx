@@ -35,7 +35,7 @@ const PhotosModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
   return (
     <Modal isOpen={isOpen} onClose={onClose} align="center" rounded="md">
       <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="16px" onClick={onClose} cursor="pointer" />
-      <Div d="flex" m={{ b: '4rem' }}>
+      <Div d="flex" className="text-[#AC8A5F] font-notoSans">
         <Text p={{ l: '0.5rem', t: '0.25rem' }} textSize="subheader">
           Tingfeng & Weiyu Photo
         </Text>
