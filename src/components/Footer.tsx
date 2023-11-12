@@ -40,7 +40,7 @@ const Footer = () => {
         </div> */}
 
         <div className="h-full w-full text-xl z-10 mt-2 md:mt-10 text-white">
-          <div className="grid gap-1 mx-10 grid-cols-4 text-center ">
+          <div className="grid gap-5 mx-10 grid-cols-4 text-center ">
             <div className="cursor-pointer" onClick={() => setShowPhotos(true)}>
               <FontAwesomeIcon icon={faImage} />
               <div className="text-sm">Photos</div>
