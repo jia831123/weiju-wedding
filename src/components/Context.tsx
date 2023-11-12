@@ -10,8 +10,8 @@ const Context = () => {
         </div>
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 h-full">
           <div className=" flex justify-center">
-            <div className="max-w-[300px] m-auto h-full">
-              <div className="flex flex-col  h-full">
+            <div className="max-w-[320px] m-auto h-full flex items-center">
+              <div className="flex flex-col  ">
                 <div>
                   <div className="text-xl text-center font-black mt-10 mb-5 text-white tracking-[5px]">
                     <div>WEDDING </div>
@@ -45,12 +45,9 @@ const Context = () => {
               <img className="h-[600px]" src="/people.png" />
             </div>
           </div>
-          <div className="absolute bottom-0  object-contain left-0 ">
-            <img src="/left.png" />
-          </div>
-          <div className="absolute bottom-0 right-0 ">
-            <img src="/right.png" />
-          </div>
+          <img className="absolute bottom-0 left-0 max-h-[200px] object-contain" src="/left.png" />
+
+          <img className="absolute bottom-0 right-0 max-h-[200px]" src="/right.png" />
         </div>
       </div>
     </>
