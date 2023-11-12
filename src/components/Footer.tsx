@@ -19,7 +19,13 @@ const Footer = () => {
     if (!id) return
     init().then(() =>
       getDataById(id).then((res) => {
-        if (res) setForUData(res)
+        console.log(res)
+        const formateText = (text: string) => text.replace(/\n|\r\n/g, '<br/>')
+        if (res)
+          setForUData({
+            ...res,
+            text: formateText(res.text),
+          })
       }),
     )
   }, [])

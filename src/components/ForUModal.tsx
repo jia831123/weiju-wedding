@@ -28,7 +28,7 @@ const ForUModal = ({
       <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="30px" onClick={onClose} cursor="pointer" />
       <div className="min-h-[300px]">
         <h1 className="text-[#AC8A5F] text-xl">Dear {data.name}</h1>
-        <p className="text-[#AC8A5F] text-sm mt-3">{data.text}</p>
+        <p className="text-[#AC8A5F] text-sm mt-3" dangerouslySetInnerHTML={{ __html: `<div>${data.text}</div>` }}></p>
       </div>
     </Modal>
   )
