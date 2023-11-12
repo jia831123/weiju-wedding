@@ -17,9 +17,9 @@ const Context = () => {
           </div>
           <div className=" flex justify-center z-50">
             <div className="max-w-[320px] m-auto h-full flex items-center">
-              <div className="flex flex-col  ">
+              <div className="flex flex-col mt-[-20%]  md:mt-0 ">
                 <div>
-                  <div className="text-xl text-center font-black mt-10 mb-5 text-white tracking-[5px]">
+                  <div className="text-xl text-center font-black mt-5 mb-5 text-white tracking-[5px]">
                     <div>WEDDING </div>
                     <div>INVITATION</div>
                   </div>
