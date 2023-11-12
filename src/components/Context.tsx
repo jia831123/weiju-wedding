@@ -27,7 +27,7 @@ const Context = () => {
                   </div>
                   <div className="text-center font-bold text-white">
                     <div>2023.12.10</div>
-                    <div>晚宴 18:00 準時入席</div>
+                    <div>晚宴 17:30 準時入席</div>
                     <div>晶華酒店</div>
                     <div>晶華會Regent Taipei Noble House 1F</div>
                     <div>台北市中山區中山北路二段 39 巷 3 號</div>
