@@ -31,7 +31,7 @@ const Footer = () => {
   }, [])
   return (
     <>
-      <div className="flex relative   ">
+      <div className="flex relative">
         {/* <div className="absolute left-0 bottom-0">
           <Image src="/left.png" />
         </div>
@@ -39,8 +39,8 @@ const Footer = () => {
           <Image src="/right.png" />
         </div> */}
 
-        <div className="h-full w-full text-xl z-10 mt-2 md:mt-10 text-white">
-          <div className="grid gap-5 mx-10 grid-cols-4 text-center ">
+        <div className="h-full w-full text-xl z-10 mt-2 md:mt-[0] md:mb-10 text-white md:text-3xl">
+          <div className="grid gap-5 md:gap-7 mx-10 md:mx-0 grid-cols-4 text-center ">
             <div className="cursor-pointer" onClick={() => setShowPhotos(true)}>
               <FontAwesomeIcon icon={faImage} />
               <div className="text-sm">Photos</div>
