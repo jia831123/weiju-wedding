@@ -40,7 +40,7 @@ const PhotosModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
           Tingfeng & Weiyu Photo
         </Text>
       </Div>
-      <div className="grid grid-cols-3 gap-1 h-[400px] overflow-scroll">
+      <div className="grid grid-cols-3 gap-1 h-[400px] overflow-y-auto">
         {images.map((src, index) => (
           <div className="flex bg-slate-100 p-2" key={index}>
             <img
