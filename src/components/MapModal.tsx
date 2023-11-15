@@ -2,7 +2,7 @@ import { Button, Modal, Icon, Anchor } from 'atomize'
 const MapModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} align="start" rounded="md">
-      <div className="overflow-scroll max-h-[70vh] pr-3">
+      <div className="overflow-y-auto max-h-[70vh] pr-3">
         <Icon name="Cross" pos="absolute" top="1rem" right="1rem" size="30px" onClick={onClose} cursor="pointer" />
         <div className="text-[#AC8A5F] flex-col gap-3">
           <h1>交通資訊</h1>
